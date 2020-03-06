@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:19031",
-      "sslPort": 44398
+      "applicationUrl": "http://localhost:19504",
+      "sslPort": 44387
     }
   },
   "profiles": {
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "BeComfy.Services.Employees": {
+    "BeComfy.Services.Employees.Api": {
       "commandName": "Project",
       "applicationUrl": "http://localhost:5035",
       "environmentVariables": {
