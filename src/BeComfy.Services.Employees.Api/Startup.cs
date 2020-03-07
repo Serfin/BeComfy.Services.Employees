@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BeComfy.Common.Mongo;
+using BeComfy.Services.Employees.Core.Domain;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,8 @@ namespace BeComfy.Services.Employees.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddMongo();
+            services.AddMongoRepository<Employee>("Employees");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
