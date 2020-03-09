@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using BeComfy.Common.Mongo;
+using BeComfy.Services.Employees.Core;
 using BeComfy.Services.Employees.Core.Domain;
 using BeComfy.Services.Employees.Core.Repositories;
 

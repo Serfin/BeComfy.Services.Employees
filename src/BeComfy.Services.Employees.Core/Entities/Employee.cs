@@ -20,8 +20,7 @@ namespace BeComfy.Services.Employees.Core.Domain
         public DateTime? UpdatedAt { get; private set; }
 
         public Employee(Guid id, string firstName, string secondName, string surname, 
-            DateTime birthday, EmployeeStatus employeeStatus, EmployeePosition employeePosition, 
-            Guid? currentFlight, DateTime createdAt, DateTime? updatedAt)
+            DateTime birthday, EmployeeStatus employeeStatus, EmployeePosition employeePosition)
         {
             SetId(id);
             SetFirstName(firstName);
