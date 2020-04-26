@@ -7,6 +7,7 @@ using Autofac.Extensions.DependencyInjection;
 using BeComfy.Common.CqrsFlow.Handlers;
 using BeComfy.Common.Mongo;
 using BeComfy.Common.RabbitMq;
+using BeComfy.Logging.Elk;
 using BeComfy.Services.Employees.Application.Commands;
 using BeComfy.Services.Employees.Application.Commands.CommandHandlers;
 using BeComfy.Services.Employees.Core.Domain;
