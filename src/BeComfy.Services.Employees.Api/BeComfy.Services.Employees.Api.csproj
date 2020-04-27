@@ -7,7 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BeComfy.Services.Employees.Infrastructure\BeComfy.Services.Employees.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\BeComfy.Common\src\BeComfy.Common\BeComfy.Common.csproj" />
-    <ProjectReference Include="..\..\..\BeComfy.Common\src\BeComfy.Logging.Elk\BeComfy.Logging.Elk.csproj" />
+    <ProjectReference Include="..\..\..\BeComfy.Common\src\BeComfy.Logging\BeComfy.Logging.csproj" />
   </ItemGroup>
 
   <ItemGroup>
