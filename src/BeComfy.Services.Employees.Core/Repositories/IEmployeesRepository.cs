@@ -10,6 +10,8 @@ namespace BeComfy.Services.Employees.Core.Repositories
     {
         Task AddAsync(Employee employee);
         Task<Employee> GetAsync(Guid id);
+        Task<Employee> GetAsync(Expression<Func<Employee, bool>> predicate);
+        Task<List<Employee>> GetManyAsync(Expression<Func<Employee, bool>> predicate, int amount);
         Task<IEnumerable<Employee>> BrowseAsync(int pageSize, int page);
         Task<IEnumerable<Employee>> BrowseAsync(int pageSize, int page, 
             Expression<Func<Employee, bool>> predicate);

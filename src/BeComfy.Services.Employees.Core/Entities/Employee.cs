@@ -87,7 +87,7 @@ namespace BeComfy.Services.Employees.Core.Domain
             SetUpdateDate();
         }
 
-        private void SetEmployeeStatus(EmployeeStatus employeeStatus)
+        public void SetEmployeeStatus(EmployeeStatus employeeStatus)
         {
             EmployeeStatus = employeeStatus;
             SetUpdateDate();

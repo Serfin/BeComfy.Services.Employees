@@ -6,6 +6,8 @@ using BeComfy.Common.Mongo;
 using BeComfy.Common.RabbitMq;
 using BeComfy.Services.Employees.Application.Commands;
 using BeComfy.Services.Employees.Application.Commands.CommandHandlers;
+using BeComfy.Services.Employees.Application.Events;
+using BeComfy.Services.Employees.Application.Events.EventHandlers;
 using BeComfy.Services.Employees.Core.Domain;
 using BeComfy.Services.Employees.Core.Repositories;
 using BeComfy.Services.Employees.Infrastructure.Repositories;
@@ -36,6 +38,7 @@ namespace BeComfy.Services.Employees.Api
 
             services.AddTransient<IEmployeesRepository, EmployeesRepository>();
             services.AddTransient<ICommandHandler<CreateEmployee>, CreateEmployeeHandler>();
+            services.AddTransient<IEventHandler<AirplaneReserved>, AirplaneReservedHandler>();
 
             var builder = new ContainerBuilder();
             builder.Populate(services);
@@ -55,7 +58,8 @@ namespace BeComfy.Services.Employees.Api
 
             app.UseRouting();
             app.UseRabbitMq()
-                .SubscribeCommand<CreateEmployee>();
+                .SubscribeCommand<CreateEmployee>()
+                .SubscribeEvent<AirplaneReserved>();
 
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
